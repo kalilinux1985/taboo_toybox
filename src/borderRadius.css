@@ -1,0 +1,38 @@
+/* Global border radius adjustment */
+:root {
+  --radius: 2px;
+}
+
+/* Make sure all radius values use the global variable */
+.rounded,
+.rounded-md,
+.rounded-lg,
+.rounded-xl,
+.rounded-2xl,
+.rounded-3xl,
+.rounded-full {
+  border-radius: var(--radius);
+}
+
+/* Exclude specifically rounded-full and similar classes */
+.rounded-full {
+  border-radius: 9999px;
+}
+
+/* Adjust card border radius */
+.card {
+  border-radius: var(--radius);
+}
+
+/* Adjust button border radius */
+.btn,
+button {
+  border-radius: var(--radius);
+}
+
+/* Adjust input border radius */
+input,
+textarea,
+select {
+  border-radius: var(--radius);
+}
